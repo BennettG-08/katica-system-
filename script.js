@@ -1,32 +1,81 @@
-let mensaje = 
-"Inicializando proyecto...\n\n" +
-"Conectando con Katica... ✅\n" +
-"Cargando recuerdos... ✅\n" +
-"Analizando sonrisas... ✅\n\n" +
-"Resultado:\n" +
-"Eres una de las personas más bonitas que llegaron a mi vida ❤️\n\n" +
-"No hice este proyecto para una nota ni para una clase.\n" +
-"Lo hice porque quería crear algo diferente para ti.\n\n" +
-"Gracias por tus risas, tus ocurrencias y por hacer mis días más bonitos.\n\n" +
-"Estado del sistema:\n❤️ Elegida\n❤️ Especial\n❤️ Única";
+let texto = 
+"Inicializando sistema...\n\n" +
+"🌹 Cargando recuerdos...\n" +
+"❤️ Detectando persona especial...\n" +
+"✨ Analizando sonrisas...\n\n" +
+"Sistema completado ✅\n\n" +
+"Bienvenida, mi Katica ❤️";
+
 
 let i = 0;
 
-function escribir() {
-    if (i < mensaje.length) {
-        document.getElementById("text").innerHTML += mensaje.charAt(i);
-        i++;
-        setTimeout(escribir, 40);
-    }
+
+function escribir(){
+
+if(i < texto.length){
+
+document.getElementById("loading").innerHTML += texto.charAt(i);
+
+i++;
+
+setTimeout(escribir,50);
+
 }
+
+}
+
 
 escribir();
 
 
-function start(){
-    document.getElementById("result").innerHTML =
-    "✔ Amor cargado<br>" +
-    "✔ Cariño activado<br>" +
-    "✔ Sistema funcionando<br><br>" +
-    "Versión final: Siempre tú ❤️";
+
+// corazones y flores cayendo
+
+function crearElemento(){
+
+let elementos=["❤️","🌹","🌸","💗","✨"];
+
+let flor=document.createElement("div");
+
+flor.className="fall";
+
+flor.innerHTML=
+elementos[Math.floor(Math.random()*elementos.length)];
+
+
+flor.style.left=Math.random()*100+"vw";
+
+flor.style.animationDuration=
+(3+Math.random()*5)+"s";
+
+
+document.body.appendChild(flor);
+
+
+setTimeout(()=>{
+
+flor.remove();
+
+},8000);
+
+}
+
+
+setInterval(crearElemento,300);
+
+
+
+
+// boton recuerdos
+
+function recuerdos(){
+
+document.getElementById("result").innerHTML=
+
+"✔ Amor cargado ❤️<br>"+
+"✔ Recuerdos encontrados 🌹<br>"+
+"✔ Cariño infinito ♾️<br><br>"+
+"Resultado final:<br>"+
+"Siempre tú, mi Katica ❤️";
+
 }
