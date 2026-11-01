@@ -6,13 +6,19 @@ box-sizing:border-box;
 body{
 
 margin:0;
+
 background:#050505;
+
 color:#ff8bd8;
-font-family:"Courier New", monospace;
+
+font-family:"Courier New",monospace;
 
 min-height:100vh;
+
 display:flex;
+
 justify-content:center;
+
 align-items:center;
 
 overflow-x:hidden;
@@ -20,10 +26,12 @@ overflow-x:hidden;
 }
 
 
+
 .terminal{
 
 width:95%;
-max-width:900px;
+
+max-width:950px;
 
 background:#080808;
 
@@ -31,12 +39,9 @@ border:2px solid #ff2fa3;
 
 border-radius:20px;
 
-padding:20px;
+padding:25px;
 
-box-shadow:
-0 0 20px #ff2fa3;
-
-z-index:2;
+box-shadow:0 0 30px #ff2fa3;
 
 }
 
@@ -45,31 +50,42 @@ z-index:2;
 header{
 
 display:flex;
+
 justify-content:space-between;
+
+align-items:center;
 
 border-bottom:1px solid #ff2fa3;
 
 padding-bottom:15px;
 
-font-size:22px;
+}
+
+
+
+h1{
 
 color:#ff4fb0;
+
+font-size:30px;
 
 }
 
 
 
-.boot{
-
-background:#020202;
+.console{
 
 margin-top:20px;
 
+background:#000;
+
+border-left:4px solid #00ff99;
+
 padding:20px;
 
-border-left:3px solid #00ff99;
-
 color:#00ff99;
+
+min-height:120px;
 
 }
 
@@ -103,25 +119,7 @@ padding:20px;
 
 
 
-h2{
-
-font-size:18px;
-
-color:#ff69c6;
-
-}
-
-
-
-.green{
-
-color:#00ff99;
-
-}
-
-
-
-.message{
+.story{
 
 grid-column:span 2;
 
@@ -129,11 +127,9 @@ grid-column:span 2;
 
 
 
-.author{
+h2{
 
-text-align:right;
-
-font-size:20px;
+color:#ff69c6;
 
 }
 
@@ -143,33 +139,33 @@ button{
 
 margin-top:25px;
 
-padding:15px 25px;
-
-border-radius:30px;
+padding:15px 30px;
 
 border:none;
+
+border-radius:30px;
 
 background:#ff2fa3;
 
 color:white;
 
-font-size:16px;
+font-size:17px;
 
 cursor:pointer;
 
-box-shadow:0 0 15px #ff2fa3;
+box-shadow:0 0 20px #ff2fa3;
 
 }
 
 
 
-#secret{
+#result{
 
-margin-top:20px;
-
-font-size:22px;
+margin-top:25px;
 
 color:#00ff99;
+
+font-size:20px;
 
 }
 
@@ -187,7 +183,6 @@ color:#ff69c6;
 
 
 
-/* flores y corazones */
 
 .fall{
 
@@ -197,19 +192,23 @@ top:-50px;
 
 font-size:25px;
 
-animation:fall linear infinite;
+animation:caer linear infinite;
 
 }
 
 
 
-@keyframes fall{
+@keyframes caer{
+
+from{
+
+transform:translateY(-50px);
+
+}
 
 to{
 
-transform:
-translateY(110vh)
-rotate(360deg);
+transform:translateY(110vh) rotate(360deg);
 
 }
 
