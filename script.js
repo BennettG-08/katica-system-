@@ -1,23 +1,25 @@
 let texto =
-"> Iniciando KaticaOS...\n"+
-"> Buscando conexión especial...\n"+
-"> Analizando recuerdos...\n"+
-"> Cargando cariño...\n"+
-"> Sistema desbloqueado ❤️";
+
+"> Iniciando KaticaOS v3.0...\n"+
+"> Buscando usuario especial...\n"+
+"> Analizando conversaciones...\n"+
+"> Cargando recuerdos...\n"+
+"> Activando módulo de cariño...\n"+
+"> Acceso concedido ❤️";
 
 
-let i=0;
+let i = 0;
 
 
 function escribir(){
 
-if(i<texto.length){
+if(i < texto.length){
 
 document.getElementById("terminalText").innerHTML += texto.charAt(i);
 
 i++;
 
-setTimeout(escribir,50);
+setTimeout(escribir,45);
 
 }
 
@@ -28,52 +30,73 @@ escribir();
 
 
 
+
+
 function unlock(){
 
-document.getElementById("secret").innerHTML=
+
+document.getElementById("secret").innerHTML =
 
 "🔓 ARCHIVO DESBLOQUEADO<br><br>"+
 
-"El sistema terminó el análisis...<br><br>"+
+"Análisis completado...<br><br>"+
 
-"Conclusión:<br>"+
+"El sistema llegó a una conclusión:<br><br>"+
 
-"Entre tantos usuarios en el mundo,<br>"+
+"Entre tantas personas, encontré a alguien que hace mis días diferentes.<br><br>"+
 
-"encontré a la persona que quiero seguir conociendo cada día más.<br><br>"+
+"Mi Katica ❤️<br><br>"+
 
-"Mi Katica ❤️";
+"Estado final: ELEGIDA ♾️";
+
 
 }
 
 
 
 
+
+
 function crearElemento(){
 
-let cosas=[
+
+let elementos = [
+
 "❤️",
 "🌹",
 "🌸",
-"✨"
+"✨",
+"💗"
+
 ];
 
 
-let elemento=document.createElement("div");
+let elemento = document.createElement("div");
+
 
 elemento.className="fall";
 
-elemento.innerHTML=
-cosas[Math.floor(Math.random()*cosas.length)];
+
+elemento.innerHTML =
+
+elementos[Math.floor(Math.random()*elementos.length)];
 
 
-elemento.style.left=Math.random()*100+"vw";
 
-elemento.style.animationDuration=
+elemento.style.left =
+
+Math.random()*100+"vw";
+
+
+
+elemento.style.animationDuration =
+
 (3+Math.random()*6)+"s";
 
 
+
 document.body.appendChild(elemento);
+
 
 
 setTimeout(()=>{
@@ -82,7 +105,9 @@ elemento.remove();
 
 },9000);
 
+
 }
+
 
 
 setInterval(crearElemento,300);
