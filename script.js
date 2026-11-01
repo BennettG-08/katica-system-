@@ -1,30 +1,30 @@
-let text =
-"> Iniciando conexión...\n"+
-"> Buscando usuario especial...\n"+
-"> Cargando recuerdos...\n"+
-"> Acceso concedido ❤️\n"+
-"> Sistema KaticaOS iniciado correctamente.";
+let texto =
+"> Iniciando KaticaOS...\n"+
+"> Buscando conexión especial...\n"+
+"> Analizando recuerdos...\n"+
+"> Cargando cariño...\n"+
+"> Sistema desbloqueado ❤️";
 
 
 let i=0;
 
 
-function type(){
+function escribir(){
 
-if(i < text.length){
+if(i<texto.length){
 
-document.getElementById("terminalText").innerHTML += text.charAt(i);
+document.getElementById("terminalText").innerHTML += texto.charAt(i);
 
 i++;
 
-setTimeout(type,50);
+setTimeout(escribir,50);
 
 }
 
 }
 
 
-type();
+escribir();
 
 
 
@@ -32,18 +32,26 @@ function unlock(){
 
 document.getElementById("secret").innerHTML=
 
-"🔓 MENSAJE DESENCRIPTADO<br><br>"+
-"El sistema confirmó algo importante:<br><br>"+
-"Mi persona favorita sigue siendo tú, Katica ❤️";
+"🔓 ARCHIVO DESBLOQUEADO<br><br>"+
+
+"El sistema terminó el análisis...<br><br>"+
+
+"Conclusión:<br>"+
+
+"Entre tantos usuarios en el mundo,<br>"+
+
+"encontré a la persona que quiero seguir conociendo cada día más.<br><br>"+
+
+"Mi Katica ❤️";
 
 }
 
 
 
 
-function createFall(){
+function crearElemento(){
 
-let items=[
+let cosas=[
 "❤️",
 "🌹",
 "🌸",
@@ -51,31 +59,30 @@ let items=[
 ];
 
 
-let item=document.createElement("div");
+let elemento=document.createElement("div");
 
-item.className="fall";
+elemento.className="fall";
 
-item.innerHTML=
-items[Math.floor(Math.random()*items.length)];
-
-
-item.style.left=Math.random()*100+"vw";
-
-item.style.animationDuration=
-(4+Math.random()*5)+"s";
+elemento.innerHTML=
+cosas[Math.floor(Math.random()*cosas.length)];
 
 
-document.body.appendChild(item);
+elemento.style.left=Math.random()*100+"vw";
+
+elemento.style.animationDuration=
+(3+Math.random()*6)+"s";
+
+
+document.body.appendChild(elemento);
 
 
 setTimeout(()=>{
 
-item.remove();
+elemento.remove();
 
 },9000);
-
 
 }
 
 
-setInterval(createFall,350);
+setInterval(crearElemento,300);
